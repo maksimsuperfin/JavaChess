@@ -13,6 +13,6 @@ public class MainAppl {
         Player player2 = new Player("Player2");
 
         Game game = new Game(player1, player2);
-        game.currentPosition();
+        game.displayDashBoard();
     }
 }

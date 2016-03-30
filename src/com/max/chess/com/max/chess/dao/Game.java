@@ -32,10 +32,6 @@ public class Game {
         this.cells = cells;
         playersColors.put(player1, color1);
         playersColors.put(player2, color2);
-        Set<Map.Entry<Player, String>> entries = playersColors.entrySet();
-        for (Map.Entry<Player, String> entry: entries) {
-            System.out.println("Player: " + entry.getKey().getName() + " has color " + entry.getValue());
-        }
     }
 
     public Game(Player player1, Player player2, String color1, String color2) {
@@ -46,7 +42,7 @@ public class Game {
         this(player1, player2, "white", "black", initialCells);
     }
 
-    private void displayDashBoard() {
+    public void displayDashBoard() {
         displayHeader();
         for (int row = 0; row < deskSize; row++) {
             System.out.print(rowNumbers[row] + "|");
@@ -58,16 +54,15 @@ public class Game {
     }
 
     private void displayHeader() {
+        Set<Map.Entry<Player, String>> entries = playersColors.entrySet();
+        for (Map.Entry<Player, String> entry: entries) {
+            System.out.println("Player: " + entry.getKey().getName() + " has color " + entry.getValue());
+        }
         System.out.print("  ");
         for (int col = 0; col < deskSize; col++) {
             System.out.print(String.format("%2s", columnNames[col]));
         }
         System.out.println();
         System.out.println("  ----------------");
-    }
-
-    public void currentPosition() {
-        System.out.println("Game: currentPosition");
-        displayDashBoard();
     }
 }
