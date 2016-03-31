@@ -5,8 +5,10 @@ package com.max.chess.com.max.chess.dao.figures;
  */
 public class Pawn extends Figure {
 
-    public Pawn(String color, String name) {
-        super(color, name);
+    public Pawn(String color) {
+        super(color);
+        this.valueOnDesk = 1;
+        this.name = this.getClass().getName();
     }
 
     @Override

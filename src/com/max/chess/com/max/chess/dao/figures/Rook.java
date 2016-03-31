@@ -5,8 +5,10 @@ package com.max.chess.com.max.chess.dao.figures;
  */
 public class Rook extends Figure {
 
-    public Rook(String color, String name) {
-        super(color, name);
+    public Rook(String color) {
+        super(color);
+        this.valueOnDesk = 4;
+        this.name = this.getClass().getName();
     }
 
     @Override

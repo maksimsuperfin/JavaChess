@@ -5,8 +5,10 @@ package com.max.chess.com.max.chess.dao.figures;
  */
 public class Knight extends Figure {
 
-    public Knight(String color, String name) {
-        super(color, name);
+    public Knight(String color) {
+        super(color);
+        this.valueOnDesk = 2;
+        this.name = this.getClass().getName();
     }
 
     @Override

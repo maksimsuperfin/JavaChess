@@ -5,8 +5,10 @@ package com.max.chess.com.max.chess.dao.figures;
  */
 public class Bishop extends Figure {
 
-    public Bishop(String color, String name) {
-        super(color, name);
+    public Bishop(String color) {
+        super(color);
+        this.valueOnDesk = 3;
+        this.name = this.getClass().getName();
     }
 
     @Override
