@@ -1,0 +1,4 @@
+WHITE
+p E2
+BLACK
+p E7
